@@ -106,21 +106,21 @@
                <li data-target="#myCarousel" data-slide-to="4"></li>
             </ol>
             <div class="carousel-inner">
-               <div class="carousel-item active" >
+               <div class="carousel-item active roll-image " >
                   <img class="first-slide" style="width: 100%; height: 650px;" src="./images/Images/image-001.jpg" alt="First slide">
                   <div class="container">
                   </div>
                </div>
-               <div class="carousel-item ">
+               <div class="carousel-item roll-image">
                   <img class="second-slide" style="width: 100%; height: 650px;" src="./images/Images/image-002.jpg" alt="Second slide">
                </div>
-               <div class="carousel-item">
+               <div class="carousel-item roll-image">
                   <img class="third-slide" style="width: 100%; height: 650px;" src="./images/Images/image-003.jpg" alt="Third slide">
                </div>
-               <div class="carousel-item">
+               <div class="carousel-item roll-image">
                   <img class="fifth" style="width: 100%; height: 650px;" src="./images/Images/image-004.jpg" alt="Fifth slide">
                </div>
-               <div class="carousel-item">
+               <div class="carousel-item roll-image">
                   <img class="fifth" style="width: 100%; height: 650px;" src="./images/Images/image-005.jpg" alt="Fifth slide">
                </div>
             </div>
@@ -138,23 +138,51 @@
                <div class="row">
                   <div class="col-md-5">
                      <div class="book_room">
-                        <h1>Book a Room Online</h1>
-                        <form class="book_now">
-                           <div class="row">
+                        <h1 style="text-align: center;" >Book a Room Online</h1>
+                        <form class="book_now" action="https://api.web3forms.com/submit" method="POST" >
+                           <input type="hidden" name="access_key" value="f221e1ea-05c1-459b-b808-f82fc3551798">
+                           <div class="row"   > 
+                           <div class="main-form" >
                               <div class="col-md-12">
-                                 <span>Arrival</span>
-                                 <img class="date_cua" src="images/date.png">
-                                 <input class="online_book" placeholder="dd/mm/yyyy" type="date" name="dd/mm/yyyy">
+                                 <span class="form-span" >Name</span>
+                                 <input class="online_book" placeholder="Enter your Name" type="text" name="name">
+                              </div>
+                              <div class="col-md-12" >
+                                 <span class="form-span">Contact Number</span>
+                                 <input class="online_book" placeholder="Enter your Mobile Number" type="text" name="contactNum">
+                              </div>
+                              <div class="col-md-12 main ">
+                                 <span class="form-span">Coming From</span>
+                                 <input class="online_book" placeholder="Enter your current residence" type="text" name="comingFrom">
                               </div>
                               <div class="col-md-12">
-                                 <span>Departure</span>
-                                 <img class="date_cua" src="images/date.png">
-                                 <input class="online_book" placeholder="dd/mm/yyyy" type="date" name="dd/mm/yyyy">
+                                 <span class="form-span">Rooms</span>
+                                 <select class="online_book" placeholder="Select Room" name="rooms" style="background-color: rgb(29, 29, 29);"
+                                 >
+                                    <option value="" >Select Rooms</option>
+                                    <option  value="deluxeRoomWithAC" >Deluxe room with AC</option>
+                                    <option value="deluxeRoomWithoutAC" >Deluxe room without AC</option>
+                                 </select>
                               </div>
                               <div class="col-md-12">
-                                 <button class="book_btn">Book Now</button>
+                                 <span class="form-span">No. of Guests</span>
+                                 <input class="online_book" placeholder="Number of Guests" type="text" name="comingFrom">
+                              </div>
+                              <div class="col-md-12">
+                                 <span>Check-in Date</span>
+                                 <!-- <img class="date_cua" src="images/date.png"> -->
+                                 <input class="online_book" placeholder="dd/mm/yyyy" type="date" name="checkInDate">
+                              </div>
+                              <div class="col-md-12">
+                                 <span>Check-out Date</span>
+                                 <!-- <img class="date_cua" src="images/date.png"> -->
+                                 <input class="online_book" placeholder="dd/mm/yyyy" type="date" name="checkOutDate">
                               </div>
                            </div>
+                           <div class="col-md-12">
+                              <button class="book_btn" name="submit" type="submit" >Book Now</button>
+                           </div>
+                        </div>
                         </form>
                      </div>
                   </div>
