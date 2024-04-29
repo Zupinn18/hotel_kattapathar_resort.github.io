@@ -943,6 +943,11 @@ line-height: 35px;
      margin-top: 90px;
 }
 
-
+@media screen and (max-width: 500px) {
+     .loader {
+          left: -25%;
+          top: -25%;
+     }
+}
 
 
